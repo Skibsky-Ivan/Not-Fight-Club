@@ -1,0 +1,72 @@
+/* ===== Fighter tooltip ===== */
+.fighter-name-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.fighter-name {
+  text-align: center;
+  padding-block: 1rem;
+  background-color: var(--theme-card-name-bg);
+  color: var(--theme-card-name-text);
+  font-weight: 700;
+  cursor: default;
+}
+
+.fighter-tooltip {
+  position: absolute;
+  top: calc(100% + 8px); /* внизу у всех, включая игрока */
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  width: max-content;
+  max-width: 220px;
+  padding: 0.75rem 1rem;
+  background: url('../../img/parchment/Parchment-straight.png') center/cover;
+  border: 2px solid var(--color-parchment-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all var(--transition-fast);
+  z-index: 20;
+}
+
+/* Arrow (снизу вверх) */
+.fighter-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent var(--color-parchment-border)
+    transparent;
+}
+
+.fighter-tooltip__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-parchment-text);
+}
+
+.fighter-tooltip__label {
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.fighter-tooltip__value {
+  font-weight: 900;
+}
+
+/* Show on hover/focus */
+.fighter-name-wrapper:hover .fighter-tooltip,
+.fighter-name-wrapper:focus-within .fighter-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}

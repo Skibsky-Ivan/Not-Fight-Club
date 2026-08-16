@@ -1,0 +1,107 @@
+/* ===== Parchment base ===== */
+.parchment {
+  position: relative;
+  width: min(100%, 32rem);
+  margin-inline: auto;
+}
+
+.parchment--long {
+  width: min(100%, 36rem);
+}
+
+.parchment--straight {
+  width: min(100%, 28rem);
+}
+
+/* ===== Background image ===== */
+.parchment__bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* For character page: bg fills container instead of being content-sized */
+.parchment--list,
+.parchment--info,
+.parchment--stats {
+  width: auto;
+  height: 100%;
+}
+
+.parchment--list .parchment__bg,
+.parchment--info .parchment__bg,
+.parchment--stats .parchment__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* ===== Seal ===== */
+.parchment__seal {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  background-image: url('../../img/parchment/Parchment-seal.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ===== Content layer ===== */
+.parchment__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--color-parchment-text);
+}
+
+/* Modifiers: padding tuned to each parchment shape */
+.parchment--menu .parchment__content,
+.parchment--registration .parchment__content {
+  padding: clamp(3rem, 7vw, 5rem) clamp(2rem, 5vw, 3.5rem);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.parchment--rules .parchment__content {
+  padding: 5rem 4.5rem 8rem;
+  align-items: center;
+}
+
+.parchment--settings .parchment__content {
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(2rem, 5vw, 3.5rem);
+}
+
+.parchment--list .parchment__content {
+  padding: 6rem 4rem 9rem;
+}
+
+.parchment--info .parchment__content {
+  padding: 4rem 5rem;
+}
+
+.parchment--stats .parchment__content {
+  padding: 6rem 4rem 9rem;
+}
+
+/* ===== Responsive: hide seal on small screens ===== */
+@media (max-width: 480px) {
+  .parchment--menu .parchment__seal,
+  .parchment--registration .parchment__seal,
+  .parchment--rules .parchment__seal,
+  .parchment--settings .parchment__seal {
+    display: none;
+  }
+}

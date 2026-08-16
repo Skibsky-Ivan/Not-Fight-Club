@@ -1,0 +1,144 @@
+/* ===== Settings page ===== */
+.settings-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.settings-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  color: #3e281e;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+  font-weight: 900;
+}
+
+/* ===== Form layout ===== */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* Reset default fieldset styles */
+.settings-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.settings-label {
+  font-family: var(--font-display);
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  color: #3e281e;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.settings-label__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-value {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 900;
+  color: #b71c1c;
+}
+
+/* ===== Background selector ===== */
+.bg-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.bg-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem;
+  background: rgba(62, 40, 30, 0.08);
+  border: 2px solid #5d4037;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.bg-option:hover {
+  border-color: rgb(142, 109, 9);
+  background: rgba(142, 109, 9, 0.15);
+}
+
+.bg-option:has(input:checked) {
+  border-color: #8e6d09;
+  background: rgba(142, 109, 9, 0.25);
+  box-shadow: 0 0 8px rgba(142, 109, 9, 0.4);
+}
+
+.bg-option__preview {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #3e281e;
+  image-rendering: pixelated;
+}
+
+.bg-option__preview--fortress {
+  background-image: url('../../img/background/fortress.png');
+}
+
+.bg-option__preview--forest {
+  background-image: url('../../img/background/forest.png');
+}
+
+.bg-option__preview--citadel {
+  background-image: url('../../img/background/citadel.png');
+}
+
+.bg-option__name {
+  font-size: 0.75rem;
+  color: #3e281e;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* ===== Actions ===== */
+.settings-actions {
+  margin-top: 0.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 520px) {
+  .bg-options {
+    grid-template-columns: 1fr;
+  }
+
+  .bg-option {
+    flex-direction: row;
+  }
+
+  .bg-option__preview {
+    width: 3.5rem;
+  }
+}

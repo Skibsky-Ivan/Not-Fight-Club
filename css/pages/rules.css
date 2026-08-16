@@ -1,0 +1,62 @@
+/* ===== Rules page ===== */
+.rules-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.rules-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #3e281e;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ===== Scrollable content ===== */
+.rules-content-wrapper {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  min-height: 0;
+}
+
+/* ===== Rule sections ===== */
+.rules-section__title {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #2c1a11;
+  margin: 0 0 0.3rem 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-bottom: 1px dashed rgba(62, 40, 30, 0.3);
+  padding-bottom: 0.2rem;
+}
+
+.rules-section p {
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  color: #4a3525;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.rules-section strong {
+  color: #2c1a11;
+  font-weight: 800;
+}
+
+.rules-section__highlight {
+  color: #8c251c;
+  font-weight: 800;
+}

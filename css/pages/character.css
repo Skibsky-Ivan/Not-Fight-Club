@@ -1,0 +1,17 @@
+/* ===== Character page layout ===== */
+.character-page {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: 90rem;
+  height: 42.03rem;
+  margin: 0 auto;
+}
+
+/* Parchment sizing on character page */
+.character-page .parchment {
+  position: relative;
+  flex: 1 1 320px;
+  height: 100%;
+}

@@ -1,0 +1,128 @@
+/* ===== Battle log ===== */
+.battle-log {
+  position: relative;
+  width: 70%;
+  margin-top: 0.25rem;
+  margin-inline: auto;
+}
+
+.battle-log__bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Content ===== */
+.battle-log .parchment__content {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+/* ===== Log entries ===== */
+.log-entry {
+  margin-bottom: 1rem;
+}
+
+.log-entry:last-child {
+  margin-bottom: 0;
+}
+
+.log-round {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--color-log-text);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.log-line {
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  line-height: 1.6;
+  margin-bottom: 0.15rem;
+  color: var(--color-log-text);
+}
+
+.log-actor {
+  font-weight: 900;
+  color: var(--color-log-actor);
+}
+
+.log-zone {
+  font-weight: 900;
+  color: var(--color-log-zone);
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.log-damage {
+  font-weight: 700;
+  color: var(--color-log-crit);
+}
+
+.log-line--miss {
+  color: var(--color-log-miss);
+}
+
+.log-line--miss .log-actor {
+  color: #7e5344;
+}
+
+.log-line--block {
+  color: var(--color-log-block);
+}
+
+.log-line--block .log-actor {
+  color: #1b5e20;
+}
+
+.log-line--crit {
+  color: var(--color-log-crit);
+}
+
+.log-line--crit .log-damage {
+  font-size: 1.05em;
+}
+
+/* ===== Badges (used in JS-generated log) ===== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  margin-left: 0.35rem;
+}
+
+.badge--parried {
+  color: var(--color-success);
+  background: rgba(46, 125, 50, 0.1);
+  border-color: var(--color-success);
+}
+
+.badge--critical {
+  color: var(--color-danger);
+  background: rgba(183, 28, 28, 0.1);
+  border-color: var(--color-danger);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .battle-log .parchment__content {
+    padding-left: clamp(1.25rem, 2vw, 2rem);
+    padding-top: 3.5rem;
+    top: 3rem;
+  }
+}

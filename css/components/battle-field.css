@@ -1,0 +1,250 @@
+/* ===== Page layout ===== */
+.battle-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.battle-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vh, 1.5rem);
+  width: 100%;
+  max-width: 68rem;
+  padding-top: 3.25rem;
+}
+
+/* ===== Arena ===== */
+.battle-arena {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  padding-inline: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ===== Fighter side ===== */
+.fighter-side {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* ===== Zones panel (fieldset reset) ===== */
+.zones-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.zones-panel__title {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(0.75rem, 1vw, 1.1rem);
+  color: #e5c4a6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0;
+}
+
+.zones-panel__count {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ===== Slots ===== */
+.slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: clamp(7.5rem, 12vw, 9rem);
+  gap: 0.5rem;
+}
+
+/* ===== Zone buttons ===== */
+.battle-zone {
+  width: clamp(3rem, 5vw, 3.75rem);
+  aspect-ratio: 1;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: visible;
+  filter: grayscale(100%) brightness(70%);
+}
+
+.battle-zone__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180%;
+  height: 180%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+  pointer-events: none;
+}
+
+.battle-zone:hover {
+  filter: grayscale(0) saturate(200%);
+  border-color: var(--theme-zone-hover);
+}
+
+.battle-zone[aria-pressed='true'],
+.battle-zone--selected {
+  border-color: var(--color-accent);
+  background: linear-gradient(180deg, #4a3b32 0%, #362a22 100%);
+  box-shadow: 0 0 10px rgba(255, 179, 0, 0.15);
+  filter: grayscale(0);
+}
+
+/* Zone icons */
+.battle-zone[data-zone='head'] .battle-zone__icon {
+  background-image: url('../../img/armor/Helmet.png');
+}
+
+.battle-zone[data-zone='torso'] .battle-zone__icon {
+  background-image: url('../../img/armor/Breastplate.png');
+}
+
+.battle-zone[data-zone='arms'] .battle-zone__icon {
+  background-image: url('../../img/armor/Gauntlets.png');
+}
+
+.battle-zone[data-zone='groin'] .battle-zone__icon {
+  background-image: url('../../img/armor/Groin-Guard.png');
+}
+
+.battle-zone[data-zone='thighs'] .battle-zone__icon {
+  background-image: url('../../img/armor/Cuisses.png');
+}
+
+.battle-zone[data-zone='legs'] .battle-zone__icon {
+  background-image: url('../../img/armor/Sabatons.png');
+}
+
+/* ===== Fighter card ===== */
+.fighter-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: clamp(7rem, 15vw, 13rem);
+}
+
+.hp-bar {
+  width: 100%;
+  height: clamp(0.75rem, 1.5vh, 1rem);
+  background: #0f0f0f;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-inset);
+}
+
+.hp-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--theme-hp-low) 0%,
+    var(--color-danger-light) 100%
+  );
+  transition: width var(--transition-base);
+}
+
+.hp-fill--high {
+  background: linear-gradient(90deg, var(--theme-hp-high) 0%, #66bb6a 100%);
+}
+
+.hp-fill--mid {
+  background: linear-gradient(90deg, var(--theme-hp-mid) 0%, #fdd835 100%);
+}
+
+.fighter {
+  width: 100%;
+  border: 5px solid var(--theme-card-border);
+  border-radius: var(--radius-md);
+  background-color: var(--theme-card-bg);
+}
+
+.fighter-img-wrapper {
+  width: 100%;
+  height: 14rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.fighter-img {
+  width: 200%;
+  max-width: none;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fighter-img--opponent {
+  transform: translateX(-50%) scaleX(-1);
+}
+
+/* ===== Battle center ===== */
+.battle-center {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* ===== Battle result (replaces attack button) ===== */
+.battle-result {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.battle-result__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .battle-arena {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .fighter-side {
+    flex-direction: column;
+  }
+
+  .slots {
+    width: auto;
+    max-width: 20rem;
+  }
+
+  .battle-center {
+    order: -1;
+  }
+}
