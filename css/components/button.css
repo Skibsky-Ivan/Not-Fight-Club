@@ -1,0 +1,72 @@
+/* ===== Base button ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border: 3px solid var(--theme-attack-btn-border);
+  border-radius: var(--radius-sm);
+  background: var(--theme-attack-btn-bg);
+  color: var(--theme-attack-btn-text);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: rgb(204, 169, 73);
+  color: #d4ab19;
+}
+
+.btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  filter: grayscale(0.8);
+}
+
+/* ===== Main menu / parchment buttons ===== */
+.btn--main-menu,
+.btn--rules-back,
+.btn--save,
+.btn--choose-character,
+.btn--registration {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  background-color: var(--theme-btn-main-bg);
+  border: none;
+  color: var(--theme-btn-main-text);
+  font-family: var(--font-base);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  letter-spacing: 0.04em;
+  box-sizing: border-box;
+}
+
+.btn--main-menu:hover:not(:disabled),
+.btn--rules-back:hover:not(:disabled),
+.btn--save:hover:not(:disabled),
+.btn--choose-character:hover:not(:disabled),
+.btn--registration:hover:not(:disabled) {
+  background-color: rgba(212, 193, 148, 0.8);
+  color: var(--color-parchment-text);
+  box-shadow: 0 0 10px rgba(142, 109, 9, 0.3);
+}
+
+/* ===== Attack button (battle) ===== */
+.btn--attack {
+  width: 100%;
+}
+
+/* ===== New battle button (result screen) ===== */
+.btn--new-battle {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+/* ===== Active / pressed states ===== */
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}

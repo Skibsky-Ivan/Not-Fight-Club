@@ -1,0 +1,100 @@
+:root {
+  /* ===== Palette ===== */
+  --color-bg: #12100e;
+  --color-bg-panel: #1e1814;
+  --color-border: #5d4037;
+  --color-border-light: #8d6e63;
+  --color-text: #d7ccc8;
+  --color-text-muted: #a1887f;
+  --color-accent: #ffb300;
+  --color-accent-hover: #ffc107;
+  --color-danger: #b71c1c;
+  --color-danger-light: #e53935;
+  --color-success: #2e7d32;
+  --color-parchment: #f3e5ab;
+  --color-parchment-border: #d7c17a;
+  --color-parchment-text: #3e2723;
+
+  /* ===== Typography ===== */
+  --font-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+
+  /* ===== Shape ===== */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+
+  /* ===== Elevation ===== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 15px rgba(20, 22, 3, 0.8);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+
+  /* ===== Motion ===== */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+
+  /* ===== Theme-aware variables (default: citadel) ===== */
+  --theme-bg: #12100e;
+  --theme-header-bg: #33323d;
+  --theme-header-border: #493b29;
+  --theme-header-text: #a78f58;
+  --theme-header-text-hover: #d4ab19;
+  --theme-header-active-bg: #2c324a;
+  --theme-accent: #7a683f;
+  --theme-btn-main-bg: rgba(232, 223, 188, 0.6);
+  --theme-btn-main-text: #b37c30;
+  --theme-card-border: #454452;
+  --theme-card-bg: #454452;
+  --theme-card-name-bg: #2b2e48;
+  --theme-card-name-text: rgb(206, 152, 16);
+  --theme-attack-btn-bg: rgb(163, 65, 33);
+  --theme-attack-btn-border: #694d1f;
+  --theme-attack-btn-text: rgb(217, 205, 153);
+  --theme-zone-bg: rgba(255, 255, 255, 0.202);
+  --theme-zone-hover: rgb(142, 109, 9);
+  --theme-hp-high: #2e7d32;
+  --theme-hp-mid: #f9a825;
+  --theme-hp-low: #b71c1c;
+
+  /* ===== Log colors ===== */
+  --color-log-text: #3e2723;
+  --color-log-actor: #c4730f;
+  --color-log-zone: #1b2485;
+  --color-log-miss: #5d4037;
+  --color-log-block: #2e7d32;
+  --color-log-crit: #b71c1c;
+  --color-log-pierce_block: #2e717d;
+
+  /* ===== Error ===== */
+  --color-error: #b71c1c;
+  --color-error-bg: rgba(183, 28, 28, 0.1);
+}
+
+/* ===== Themes (fill in later) ===== */
+[data-theme='forest'] {
+  /* TODO: forest palette */
+  --theme-bg: #0f1a0f;
+  --theme-header-bg: #22352b;
+  --theme-header-border: #265825;
+  --theme-header-text: #8fbc8f;
+  --theme-header-active-bg: #23443c;
+  --theme-accent: #598870;
+  --theme-card-border: #29534a;
+  --theme-card-bg: #334534;
+  --theme-card-name-bg: #21322f;
+  --bg-image: url('/img/background/forest.png');
+}
+
+[data-theme='fortress'] {
+  /* TODO: fortress palette */
+  --theme-bg: #1a1a1a;
+  --theme-header-bg: #212961;
+  --theme-header-border: #423c5d;
+  --theme-header-text: #bdbdbd;
+  --theme-accent: #90a4ae;
+  --theme-card-border: #183480;
+  --theme-card-bg: #2d2446;
+  --theme-header-active-bg: #2c324a;
+  --theme-card-name-bg: #1d2d5b;
+  --bg-image: url('/img/background/fortress.png');
+}

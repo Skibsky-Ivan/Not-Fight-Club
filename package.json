@@ -1,0 +1,30 @@
+{
+  "name": "not-fight-club",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build && cp dist/index.html dist/404.html",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skibsky-Ivan/Not-Fight-Club.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Skibsky-Ivan/Not-Fight-Club/issues"
+  },
+  "homepage": "https://Skibsky-Ivan.github.io/Not-Fight-Club",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  }
+}
