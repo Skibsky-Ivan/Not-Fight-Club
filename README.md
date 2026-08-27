@@ -7,6 +7,8 @@
 <img width="320" height="163" alt="Character" src="https://github.com/user-attachments/assets/06f1696a-8278-47ea-90e8-ec4b6e7185ba" />
 <img width="320" height="163" alt="Battle" src="https://github.com/user-attachments/assets/146278bf-f3ca-457b-993b-0185aea7cae1" />
 <img width="320" height="163" alt="Settings" src="https://github.com/user-attachments/assets/54f97690-11bb-4c8c-b9c5-02dc8cd27cc0" />
+<img width="320" height="163" alt="изображение" src="https://github.com/user-attachments/assets/3ec7c8d4-bde3-48b1-bc3c-db6d2366c7c5" />
+
 
 ## [Deployment](https://skibsky-ivan.github.io/Not-Fight-Club/)
 
