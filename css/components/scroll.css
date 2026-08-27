@@ -1,10 +1,12 @@
 /* Scrollbar styling (character page only) */
+.log-container::-webkit-scrollbar,
 .rules-content-wrapper::-webkit-scrollbar,
 .character-grid-wrapper::-webkit-scrollbar,
 .stats-history__list::-webkit-scrollbar {
   width: 6px;
 }
 
+.log-container::-webkit-scrollbar-track,
 .rules-content-wrapper::-webkit-scrollbar-track,
 .character-grid-wrapper::-webkit-scrollbar-track,
 .stats-history__list::-webkit-scrollbar-track {
@@ -12,6 +14,7 @@
   border-radius: 3px;
 }
 
+.log-container::-webkit-scrollbar-thumb,
 .rules-content-wrapper::-webkit-scrollbar-thumb,
 .character-grid-wrapper::-webkit-scrollbar-thumb,
 .stats-history__list::-webkit-scrollbar-thumb {
@@ -20,12 +23,15 @@
   border: 1px solid #3e2723;
 }
 
+.log-container::-webkit-scrollbar-thumb:hover,
 .rules-content-wrapper::-webkit-scrollbar-thumb:hover,
 .character-grid-wrapper::-webkit-scrollbar-thumb:hover,
 .stats-history__list::-webkit-scrollbar-thumb:hover {
   background: #3e2723;
 }
 
+
+.log-container,
 .rules-content-wrapper,
 .character-grid-wrapper,
 .stats-history__list {

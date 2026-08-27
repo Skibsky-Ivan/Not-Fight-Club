@@ -6,6 +6,7 @@
   height: var(--header-height);
   padding: 0.75rem 1rem;
   z-index: 100;
+  pointer-events: none;
 }
 
 .nav {
@@ -16,6 +17,8 @@
 }
 
 .nav-link {
+  display: inline-block;
+  pointer-events: auto;
   padding: 0.5rem 1.25rem;
   border: 3px solid var(--theme-header-border);
   color: var(--theme-header-text);
@@ -37,9 +40,13 @@
 }
 
 .nav-link:active,
-.nav-link--active {
+.nav-link.active {
   border-color: var(--theme-accent);
   color: var(--theme-accent);
-  background: linear-gradient(180deg, #2c324a 0%, #2b2b47 100%);
+  background:  var(--theme-header-active-bg);
+  transform: rotate(0);
+}
+
+.nav-link--active {
   pointer-events: none;
 }

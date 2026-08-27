@@ -54,13 +54,12 @@
 }
 
 /* Active state */
-.char-card[aria-pressed='true'],
-.char-card--active {
+.char-card--selected {
   border-color: var(--color-accent);
   background: rgba(255, 179, 0, 0.1);
 }
 
-.char-card[aria-pressed='true'] .char-card__avatar,
 .char-card--active .char-card__avatar {
   box-shadow: 0 0 20px #302302;
 }
+

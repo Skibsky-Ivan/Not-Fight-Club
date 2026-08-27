@@ -20,7 +20,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('../../img/background/citadel.png');
+  background-image: var(--bg-image, url('../../img/background/citadel.png'));
   background-size: cover;
   background-position: center top;
   filter: brightness(80%);
@@ -48,7 +48,6 @@ body::before {
   padding-top: clamp(1rem, 3vh, 2rem);
 }
 
-/* Hidden by default in SPA; .page--active shows it */
 .page[hidden] {
   display: none !important;
 }

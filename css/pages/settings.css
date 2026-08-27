@@ -18,25 +18,12 @@
   font-weight: 900;
 }
 
-/* ===== Form layout ===== */
-.settings-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-}
-
+/* ===== Layout ===== */
+.settings-form,
 .settings-group {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-}
-
-/* Reset default fieldset styles */
-.settings-form fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
+  gap: 1rem;
 }
 
 .settings-label {
@@ -48,17 +35,120 @@
   letter-spacing: 0.03em;
 }
 
-.settings-label__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .settings-value {
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 900;
   color: #b71c1c;
+  min-width: 3ch;
+  text-align: right;
+}
+
+/* ===== Volume row ===== */
+.settings-group--inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.settings-group--inline .settings-label {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.settings-group--inline .settings-slider {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== Music row ===== */
+.settings-music-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.settings-music-row .settings-label {
+  margin: 0;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+}
+
+/* ===== Mute button ===== */
+.btn-mute {
+  width: 4rem;
+  height: 2.25rem;
+  padding: 0 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(243, 229, 171, 0.6);
+  border: 2px solid #8e6d09;
+  border-radius: var(--radius-sm);
+  color: #3e2723;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-mute:hover {
+  background-color: rgba(243, 229, 171, 0.9);
+  border-color: #b8860b;
+  box-shadow: 0 0 8px rgba(142, 109, 9, 0.3);
+}
+
+/* ===== Track select ===== */
+.select-track {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 2.25rem;
+  padding: 0 1rem 0 0.75rem;
+  background-color: rgba(243, 229, 171, 0.6);
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  border: 2px solid #8e6d09;
+  border-radius: var(--radius-sm);
+  color: #3e2723;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 140px;
+}
+
+.select-track:hover {
+  background-color: rgba(243, 229, 171, 0.9);
+  border-color: #b8860b;
+  box-shadow: 0 0 8px rgba(142, 109, 9, 0.3);
+}
+
+.select-track:focus {
+  outline: none;
+  border-color: #b8860b;
+  background-color: rgba(243, 229, 171, 0.9);
+}
+
+/* ===== Dropdown options ===== */
+.select-track option {
+  background-color: #f3e5ab;
+  color: #3e2723;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 0.6rem;
+}
+
+.select-track option:checked,
+.select-track option:hover {
+  background-color: #c4a44f;
+  color: #241e15;
 }
 
 /* ===== Background selector ===== */
@@ -141,4 +231,9 @@
   .bg-option__preview {
     width: 3.5rem;
   }
+
+  .settings-group--inline {
+    gap: 0.5rem;
+  }
 }
+

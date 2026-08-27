@@ -39,6 +39,7 @@
   --theme-header-border: #493b29;
   --theme-header-text: #a78f58;
   --theme-header-text-hover: #d4ab19;
+  --theme-header-active-bg: #2c324a;
   --theme-accent: #7a683f;
   --theme-btn-main-bg: rgba(232, 223, 188, 0.6);
   --theme-btn-main-text: #b37c30;
@@ -46,9 +47,10 @@
   --theme-card-bg: #454452;
   --theme-card-name-bg: #2b2e48;
   --theme-card-name-text: rgb(206, 152, 16);
-  --theme-attack-btn-bg: rgb(142, 109, 9);
-  --theme-attack-btn-border: #69591f;
+  --theme-attack-btn-bg: rgb(163, 65, 33);
+  --theme-attack-btn-border: #694d1f;
   --theme-attack-btn-text: rgb(217, 205, 153);
+  --theme-zone-bg: rgba(255, 255, 255, 0.202);
   --theme-zone-hover: rgb(142, 109, 9);
   --theme-hp-high: #2e7d32;
   --theme-hp-mid: #f9a825;
@@ -56,11 +58,12 @@
 
   /* ===== Log colors ===== */
   --color-log-text: #3e2723;
-  --color-log-actor: #b71c1c;
-  --color-log-zone: #1a237e;
+  --color-log-actor: #c4730f;
+  --color-log-zone: #1b2485;
   --color-log-miss: #5d4037;
   --color-log-block: #2e7d32;
   --color-log-crit: #b71c1c;
+  --color-log-pierce_block: #2e717d;
 
   /* ===== Error ===== */
   --color-error: #b71c1c;
@@ -71,17 +74,27 @@
 [data-theme='forest'] {
   /* TODO: forest palette */
   --theme-bg: #0f1a0f;
-  --theme-header-bg: #2d3a2d;
-  --theme-header-border: #3d5c3d;
+  --theme-header-bg: #22352b;
+  --theme-header-border: #265825;
   --theme-header-text: #8fbc8f;
-  --theme-accent: #4caf50;
+  --theme-header-active-bg: #23443c;
+  --theme-accent: #598870;
+  --theme-card-border: #29534a;
+  --theme-card-bg: #334534;
+  --theme-card-name-bg: #21322f;
+  --bg-image: url('../../img/background/forest.png');
 }
 
 [data-theme='fortress'] {
   /* TODO: fortress palette */
   --theme-bg: #1a1a1a;
-  --theme-header-bg: #3d3d3d;
-  --theme-header-border: #5a5a5a;
+  --theme-header-bg: #212961;
+  --theme-header-border: #423c5d;
   --theme-header-text: #bdbdbd;
   --theme-accent: #90a4ae;
+  --theme-card-border: #183480;
+  --theme-card-bg: #2d2446;
+  --theme-header-active-bg: #2c324a;
+  --theme-card-name-bg: #1d2d5b;
+  --bg-image: url('../../img/background/fortress.png');
 }

@@ -75,7 +75,7 @@
   aspect-ratio: 1;
   border: 2px solid transparent;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--theme-zone-bg);
   cursor: pointer;
   transition: all var(--transition-fast);
   position: relative;
@@ -105,8 +105,7 @@
 .battle-zone[aria-pressed='true'],
 .battle-zone--selected {
   border-color: var(--color-accent);
-  background: linear-gradient(180deg, #4a3b32 0%, #362a22 100%);
-  box-shadow: 0 0 10px rgba(255, 179, 0, 0.15);
+  background: rgba(118, 99, 43, 0.6);
   filter: grayscale(0);
 }
 
@@ -208,24 +207,67 @@
 .battle-center {
   flex-shrink: 0;
   text-align: center;
+  width: 16rem;
+}
+
+.btn--attack {
+  max-width: fit-content;
 }
 
 /* ===== Battle result (replaces attack button) ===== */
 .battle-result {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  text-align: center;
+  padding: 1rem;
 }
 
 .battle-result__title {
+  margin: 0 0 1rem;
+  line-height: 1.2;
+  background-color: rgba(51, 65, 66, 0.6);
+  box-shadow: 0 0 30px rgba(38, 56, 57, 0.6);
+  padding: 1.5rem;
+}
+
+.battle-result__main {
+  display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 2rem);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-accent);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.battle-result__sub {
+  display: block;
+  font-family: var(--font-base);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.battle-result--win .battle-result__main {
+  color: #6e9811;
+  text-shadow: 0 0 12px rgba(106, 111, 52, 0.4);
+}
+
+.battle-result--loss .battle-result__main {
+  color: #b22417;
+  text-shadow: 0 0 12px rgba(137, 71, 71, 0.4);
+}
+
+.battle-result--draw .battle-result__main {
+  color: #3d898b;
+  text-shadow: 0 0 12px rgba(33, 92, 90, 0.4);
+}
+
+.battle-result--win .battle-result__sub {
+  color: #82944f;
+}
+
+.battle-result--loss .battle-result__sub {
+  color: #ac5e34;
+}
+
+.battle-result--draw .battle-result__sub {
+  color: #518798;
 }
 
 /* ===== Responsive ===== */
