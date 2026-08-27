@@ -20,7 +20,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: var(--bg-image, url('../../img/background/citadel.png'));
+  background-image: var(--bg-image, url('/img/background/citadel.png'));
   background-size: cover;
   background-position: center top;
   filter: brightness(80%);

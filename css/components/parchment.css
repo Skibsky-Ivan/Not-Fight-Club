@@ -45,7 +45,7 @@
   right: 1rem;
   width: 7.5rem;
   height: 7.5rem;
-  background-image: url('../../img/parchment/Parchment-seal.png');
+  background-image: url('/img/parchment/Parchment-seal.png');
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(-12deg);

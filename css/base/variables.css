@@ -82,7 +82,7 @@
   --theme-card-border: #29534a;
   --theme-card-bg: #334534;
   --theme-card-name-bg: #21322f;
-  --bg-image: url('../../img/background/forest.png');
+  --bg-image: url('/img/background/forest.png');
 }
 
 [data-theme='fortress'] {
@@ -96,5 +96,5 @@
   --theme-card-bg: #2d2446;
   --theme-header-active-bg: #2c324a;
   --theme-card-name-bg: #1d2d5b;
-  --bg-image: url('../../img/background/fortress.png');
+  --bg-image: url('/img/background/fortress.png');
 }

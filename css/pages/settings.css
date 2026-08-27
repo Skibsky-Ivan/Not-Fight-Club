@@ -193,15 +193,15 @@
 }
 
 .bg-option__preview--fortress {
-  background-image: url('../../img/background/fortress.png');
+  background-image: url('/img/background/fortress.png');
 }
 
 .bg-option__preview--forest {
-  background-image: url('../../img/background/forest.png');
+  background-image: url('/img/background/forest.png');
 }
 
 .bg-option__preview--citadel {
-  background-image: url('../../img/background/citadel.png');
+  background-image: url('/img/background/citadel.png');
 }
 
 .bg-option__name {

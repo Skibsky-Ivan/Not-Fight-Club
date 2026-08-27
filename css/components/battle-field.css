@@ -111,27 +111,27 @@
 
 /* Zone icons */
 .battle-zone[data-zone='head'] .battle-zone__icon {
-  background-image: url('../../img/armor/Helmet.png');
+  background-image: url('/img/armor/Helmet.png');
 }
 
 .battle-zone[data-zone='torso'] .battle-zone__icon {
-  background-image: url('../../img/armor/Breastplate.png');
+  background-image: url('/img/armor/Breastplate.png');
 }
 
 .battle-zone[data-zone='arms'] .battle-zone__icon {
-  background-image: url('../../img/armor/Gauntlets.png');
+  background-image: url('/img/armor/Gauntlets.png');
 }
 
 .battle-zone[data-zone='groin'] .battle-zone__icon {
-  background-image: url('../../img/armor/Groin-Guard.png');
+  background-image: url('/img/armor/Groin-Guard.png');
 }
 
 .battle-zone[data-zone='thighs'] .battle-zone__icon {
-  background-image: url('../../img/armor/Cuisses.png');
+  background-image: url('/img/armor/Cuisses.png');
 }
 
 .battle-zone[data-zone='legs'] .battle-zone__icon {
-  background-image: url('../../img/armor/Sabatons.png');
+  background-image: url('/img/armor/Sabatons.png');
 }
 
 /* ===== Fighter card ===== */
